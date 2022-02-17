@@ -3,19 +3,18 @@ const somTeclas = document.querySelectorAll('.tecla_som');
 
 function tocaSom(indice) {
     somTeclas[indice].play(); 
-
-
 }
 
 
 const listaTeclas = document.querySelectorAll('.tecla');
 
-var indice = 0;
-
-listaTeclas[0].onclick = somTeclas[0].tocaSom;
-
+//Usei tanto as teclas quanto os audios em estilo de lista(array) e usei os indice delas para tocar som, vinculada a tecla.
 
 for (let i = 0; i < somTeclas.length; i++) {
-    const element = somTeclas[i];
     
+    listaTeclas[i].onclick = function() {
+
+        tocaSom(i);
+    } 
+
 }
