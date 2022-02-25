@@ -29,4 +29,12 @@ for (let i = 0; i < listaTeclas.length; i++) {
         tocaTecla(idDaTecla);
     } 
 
+
+    listaTeclas[i].onkeydown = function () {
+        listaTeclas[i].classList.add('ativa')
+    }
+    listaTeclas[i].onkeyup = function () {
+        listaTeclas[i].classList.remove('ativa')
+    }
+    
 }
