@@ -7,7 +7,18 @@ function tocaSom(indice) {
 
 
 function tocaTecla (id){
-    document.querySelector(id).play();
+    const elemento =document.querySelector(id)
+
+
+    if (elemento === null){
+        console.log('Elemento não encontrado');
+
+    }
+
+    else if (elemento.localName === 'audio' || elemento != null){
+
+        elemento.play();
+    }
 
 }
 
