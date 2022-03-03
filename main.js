@@ -10,14 +10,13 @@ function tocaTecla (id){
     const elemento =document.querySelector(id)
 
 
-    if (elemento === null){
-        console.log('Elemento não encontrado');
-
-    }
-
-    else if (elemento.localName === 'audio' || elemento != null){
+    if (elemento.localName === 'audio' && elemento != null){
 
         elemento.play();
+    }
+
+    else{
+        console.log('Elemento não encontrado ou seletor inválido');
     }
 
 }
